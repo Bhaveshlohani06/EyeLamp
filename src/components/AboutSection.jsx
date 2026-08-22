@@ -38,7 +38,7 @@ function AboutSection() {
 
             <div className="d-flex align-items-center gap-3 p-3 rounded-4" style={{ background: "var(--paper-dim)" }}>
               <img
-                src="../public/images/founder.png"
+                src="/images/founder.png"
                 alt="Achintya Pandey, CEO and Founder of EYELAMP"
                 className="founder-avatar"
               />

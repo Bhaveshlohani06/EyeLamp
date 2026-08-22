@@ -60,7 +60,7 @@ function Footer() {
         </div>
 
         <div className="footer-founder mt-5">
-          <img src="../public/images/founder.png" alt="Achintya Pandey, CEO and Founder of EYELAMP" />
+          <img src="/images/founder.png" alt="Achintya Pandey, CEO and Founder of EYELAMP" />
           <div>
             <div className="name">Achintya Pandey</div>
             <div className="role">CEO &amp; Founder</div>
