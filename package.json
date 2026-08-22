@@ -1,13 +1,14 @@
-{
+{  
   "name": "eyelamp-website",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-   "scripts": {
+  "scripts": {
     "dev": "vite",
-    "build": "NODE_OPTIONS='--max-old-space-size=4096' vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
+
 
   "dependencies": {
     "bootstrap": "^5.3.3",
