@@ -1,0 +1,864 @@
+/* =========================================================
+   EYELAMP — Design Tokens
+   Palette:  ink (charcoal) / paper (warm off-white) / brass (frame-gold accent)
+   Type:     Fraunces (display) + Inter (body/UI) + Space Mono (optometry labels)
+   Signature: Snellen eye-chart motif used as texture + section dividers
+========================================================= */
+
+:root {
+  --ink: #0f1b2d;
+  --ink-soft: #1b2c42;
+  --paper: #f5f6f1;
+  --paper-dim: #ecefe6;
+  --brass: #7c8c4a;
+  --brass-dark: #5c6938;
+  --slate: #5b6570;
+  --line: #dde1d4;
+  --line-dark: rgba(245, 246, 241, 0.14);
+  --white: #ffffff;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "Space Mono", monospace;
+
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 10px;
+  --shadow-soft: 0 20px 50px -25px rgba(15, 27, 45, 0.35);
+  --shadow-card: 0 12px 30px -18px rgba(15, 27, 45, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--ink);
+}
+
+.eyelamp-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brass-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eyelamp-eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 1px;
+  background: var(--brass);
+  display: inline-block;
+}
+
+.section {
+  padding: clamp(56px, 9vw, 108px) 0;
+}
+
+.section-tight {
+  padding: clamp(40px, 6vw, 72px) 0;
+}
+
+.section-dark {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4 {
+  color: var(--paper);
+}
+
+.section-dim {
+  background: var(--paper-dim);
+}
+
+.eyelamp-lead {
+  color: var(--slate);
+  font-size: 1.05rem;
+  max-width: 620px;
+}
+
+.section-dark .eyelamp-lead {
+  color: rgba(245, 246, 241, 0.72);
+}
+
+/* ---------- Buttons ---------- */
+.btn-brass {
+  background: var(--brass);
+  border: 1px solid var(--brass);
+  color: var(--ink);
+  font-weight: 600;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-brass:hover {
+  background: var(--brass-dark);
+  border-color: var(--brass-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.btn-outline-ink {
+  background: transparent;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  font-weight: 600;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-outline-ink:hover {
+  background: var(--ink);
+  color: var(--paper);
+  transform: translateY(-2px);
+}
+
+.section-dark .btn-outline-ink {
+  border-color: rgba(245, 246, 241, 0.5);
+  color: var(--paper);
+}
+
+.section-dark .btn-outline-ink:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.btn-whatsapp {
+  background: #1e2a24;
+  border: 1px solid var(--brass);
+  color: var(--paper);
+  font-weight: 600;
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  transition: all 0.25s ease;
+}
+
+.btn-whatsapp:hover {
+  background: var(--brass);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+/* ---------- Header ---------- */
+.eyelamp-nav {
+  background: rgba(245, 246, 241, 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  padding: 0.55rem 0;
+  transition: box-shadow 0.3s ease;
+}
+
+.eyelamp-nav.scrolled {
+  box-shadow: 0 8px 24px -18px rgba(15, 27, 45, 0.4);
+}
+
+.eyelamp-logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.9rem;
+  letter-spacing: 0.01em;
+  color: var(--ink) !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eyelamp-logo span {
+  color: var(--brass);
+}
+
+.eyelamp-nav .nav-link {
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin: 0 0.6rem;
+  position: relative;
+  padding: 0.4rem 0.1rem !important;
+}
+
+.eyelamp-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--brass);
+  transition: width 0.25s ease;
+}
+
+.eyelamp-nav .nav-link:hover::after,
+.eyelamp-nav .nav-link.active::after {
+  width: 100%;
+}
+
+.eyelamp-nav .nav-link.active {
+  color: var(--brass-dark);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  background: var(--ink);
+  color: var(--paper);
+  overflow: hidden;
+  padding: clamp(70px, 12vw, 130px) 0 clamp(50px, 8vw, 90px);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 30%;
+  opacity: 0.34;
+  filter: grayscale(15%);
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    var(--ink) 0%,
+    rgba(15, 27, 45, 0.94) 42%,
+    rgba(15, 27, 45, 0.55) 100%
+  );
+}
+
+.hero-title {
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  line-height: 1.02;
+  color: var(--paper);
+}
+
+.hero-title em {
+  font-style: italic;
+  color: var(--brass);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line-dark);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(245, 246, 241, 0.8);
+}
+
+.hero-visual {
+  position: relative;
+  z-index: 2;
+}
+
+.rx-card {
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: var(--radius-md);
+  padding: 1.4rem 1.6rem;
+  box-shadow: var(--shadow-soft);
+  font-family: var(--font-mono);
+}
+
+.rx-card .rx-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  border-bottom: 1px dashed var(--line);
+  font-size: 0.85rem;
+}
+
+.rx-card .rx-row:last-child {
+  border-bottom: none;
+}
+
+/* ---------- Stat strip ---------- */
+.stat-strip {
+  border-top: 1px solid var(--line-dark);
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.stat-item {
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--brass);
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(245, 246, 241, 0.65);
+}
+
+/* ---------- Cards: Services ---------- */
+.service-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 1.9rem 1.6rem;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--brass);
+}
+
+.service-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--paper-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brass-dark);
+  font-size: 1.5rem;
+  margin-bottom: 1.1rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  background: var(--brass);
+  color: var(--ink);
+}
+
+.service-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  color: var(--slate);
+  font-size: 0.92rem;
+  margin-bottom: 1.1rem;
+}
+
+.service-link {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 2px;
+  transition: gap 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.service-link:hover {
+  gap: 10px;
+  color: var(--brass-dark);
+  border-color: var(--brass-dark);
+}
+
+/* ---------- Frame showcase ---------- */
+.frame-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 1.8rem 1rem 1.4rem;
+  text-align: center;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.frame-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--brass);
+}
+
+.frame-card-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  margin-bottom: 1.1rem;
+  transition: transform 0.35s ease;
+}
+
+.frame-card h3 {
+  font-size: 0.98rem;
+  margin-bottom: 0.9rem;
+}
+
+.frame-buy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+
+.frame-buy-btn:hover {
+  background: var(--brass);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+.why-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.why-num {
+  font-family: var(--font-mono);
+  color: var(--brass);
+  font-size: 0.85rem;
+  padding-top: 0.15rem;
+}
+
+.why-card h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+}
+
+.why-card p {
+  color: var(--slate);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+/* ---------- Eyewear collection ---------- */
+.eyewear-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  background: var(--ink);
+  color: var(--paper);
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.8rem;
+  border: 1px solid var(--line-dark);
+  transition: transform 0.35s ease;
+}
+
+.eyewear-card:hover {
+  transform: translateY(-6px);
+}
+
+.eyewear-card .frame-illustration {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  opacity: 0.9;
+}
+
+.eyewear-card h3 {
+  color: var(--paper);
+  font-size: 1.35rem;
+  margin-bottom: 0.4rem;
+}
+
+.eyewear-card p {
+  color: rgba(245, 246, 241, 0.68);
+  font-size: 0.88rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Eye test CTA ---------- */
+.eyetest-cta {
+  background: linear-gradient(135deg, var(--ink) 0%, #1f242b 100%);
+  border-radius: var(--radius-lg);
+  padding: clamp(2.2rem, 5vw, 4rem);
+  color: var(--paper);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ---------- Contact ---------- */
+.contact-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 1.6rem 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.contact-card:hover {
+  box-shadow: var(--shadow-card);
+  transform: translateY(-3px);
+}
+
+.contact-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--paper-dim);
+  color: var(--brass-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.form-control-eyelamp {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+}
+
+.form-control-eyelamp:focus {
+  border-color: var(--brass);
+  box-shadow: 0 0 0 3px rgba(124, 140, 74, 0.18);
+  outline: none;
+}
+
+/* ---------- Social icons ---------- */
+.social-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line-dark);
+  color: inherit;
+  font-size: 1.1rem;
+  transition: all 0.25s ease;
+}
+
+.social-icon:hover {
+  background: var(--brass);
+  color: var(--ink);
+  border-color: var(--brass);
+  transform: translateY(-3px);
+}
+
+/* ---------- Footer ---------- */
+.eyelamp-footer {
+  background: var(--ink);
+  color: rgba(245, 246, 241, 0.75);
+  padding: 4rem 0 1.6rem;
+}
+
+.eyelamp-footer h5 {
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1.1rem;
+}
+
+.eyelamp-footer a {
+  color: rgba(245, 246, 241, 0.7);
+  display: block;
+  padding: 0.3rem 0;
+  font-size: 0.92rem;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.eyelamp-footer a:hover {
+  color: var(--brass);
+  padding-left: 4px;
+}
+
+.eyelamp-footer-bottom {
+  border-top: 1px solid var(--line-dark);
+  margin-top: 2.5rem;
+  padding-top: 1.4rem;
+  font-size: 0.82rem;
+  color: rgba(245, 246, 241, 0.5);
+}
+
+/* ---------- Floating WhatsApp ---------- */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 1050;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #1e2a24;
+  border: 1px solid var(--brass);
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 14px 30px -12px rgba(15, 27, 45, 0.5);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.floating-whatsapp:hover {
+  background: var(--brass);
+  color: var(--ink);
+  transform: scale(1.08);
+}
+
+/* ---------- Utility ---------- */
+.divider-chart {
+  height: 46px;
+  opacity: 0.5;
+}
+
+.page-header {
+  background: var(--ink);
+  color: var(--paper);
+  padding: clamp(64px, 10vw, 96px) 0 clamp(40px, 6vw, 60px);
+  position: relative;
+}
+
+.page-header-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 25%;
+  opacity: 0.4;
+  filter: grayscale(15%);
+}
+
+.page-header-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 27, 45, 0.55) 0%,
+    var(--ink) 92%
+  );
+}
+
+/* ---------- Logo mark ---------- */
+.eyelamp-logo-mark {
+  height: 52px;
+  width: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.eyelamp-footer .eyelamp-logo-mark {
+  height: 68px;
+  border-radius: 12px;
+}
+
+.nav-instagram-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 1.2rem;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.nav-instagram-btn:hover {
+  background: var(--brass);
+  border-color: var(--brass);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ---------- Footer founder block ---------- */
+.footer-founder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding-bottom: 1.6rem;
+  margin-bottom: 1.6rem;
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.footer-founder img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--brass);
+}
+
+.footer-founder .name {
+  color: var(--paper);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.footer-founder .role {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+
+/* ---------- Founder avatar ---------- */
+.founder-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--brass);
+}
+
+/* ---------- Eye-camp gallery ---------- */
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  height: 100%;
+  min-height: 200px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-item figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.9rem 0.8rem 0.7rem;
+  background: linear-gradient(0deg, rgba(15, 27, 45, 0.82), transparent);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  line-height: 1.35;
+}
+
+.reveal {
+  animation: eyelampFadeUp 0.7s ease both;
+}
+
+@keyframes eyelampFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .service-card,
+  .eyewear-card,
+  .btn-brass,
+  .btn-outline-ink {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section {
+    padding: 44px 0;
+  }
+  .hero {
+    text-align: center;
+    padding-top: 96px;
+  }
+  .hero-badge {
+    margin: 0 auto;
+  }
+  .eyelamp-logo {
+    font-size: 1.5rem;
+    gap: 8px;
+  }
+  .eyelamp-logo-mark {
+    height: 40px;
+  }
+  .eyelamp-footer .eyelamp-logo-mark {
+    height: 52px;
+  }
+}
