@@ -42,7 +42,8 @@ import Services from "./pages/Services";
 import Eyewear from "./pages/Eyewear";
 import Contact from "./pages/Contact";
 import WhatsAppPopup from "./components/WhatsappPopup";
-import FloatingWhatsApp from "./components/FloatingWhatsApp";
+import FloatingSocials from "./components/FloatingSocials";
+
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -67,7 +68,7 @@ function App() {
       
       {/* WhatsApp Popups - Only show on all pages */}
       <WhatsAppPopup />
-      <FloatingWhatsApp />
+      <FloatingSocials />
     </>
   );
 }

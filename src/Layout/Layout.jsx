@@ -3,7 +3,7 @@ import { Toaster } from "react-hot-toast";
 
 import Header from "./Header";
 import Footer from "./Footer";
-import FloatingWhatsApp from "../components/FloatingWhatsApp";
+import FloatingSocials from "../components/FloatingSocials"; 
 
 const Layout = ({
   children,
@@ -26,7 +26,7 @@ const Layout = ({
 
       <main style={{ paddingTop: "76px" }}>{children}</main>
 
-      <FloatingWhatsApp />
+      <FloatingSocials />
       <Footer />
     </>
   );
