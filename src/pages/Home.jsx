@@ -32,9 +32,9 @@ function Home() {
                 optometrists — paired with a vast collection of budget-friendly
                 to luxury frames, durable lenses and stylish sunglasses.
               </p>
-              <a href="/about" className="btn-outline-ink">
+              {/* <a href="/about" className="btn-outline-ink">
                 Learn Our Story <FaArrowRight />
-              </a>
+              </a> */}
             </Col>
             <Col lg={5} className="text-center reveal">
               <div className="d-flex justify-content-center gap-4 flex-wrap">
