@@ -9,6 +9,7 @@ import EyewearCollection from "../components/EyewearCollection";
 import EyeTestCTA from "../components/EyeTestCTA";
 import EyeCampGallery from "../components/EyeCampGallery";
 import FrameIllustration from "../components/FrameIllustration";
+import FrameCatalogCarousel from "../components/FrameCatalogCarousel";
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       description="EYELAMP is a premium optical showroom in Bahraich offering computerized eye testing, spectacles, sunglasses, contact lenses and budget-to-luxury frames."
     >
       <Hero />
+      <FrameCatalogCarousel />
 
       <section className="section">
         <Container>

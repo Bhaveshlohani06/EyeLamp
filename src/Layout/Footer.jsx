@@ -69,7 +69,7 @@ function Footer() {
 
         <div className="eyelamp-footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 text-center text-md-start">
           <span>© 2026 EYELAMP. All Rights Reserved.</span>
-          <span>Designed for EYELAMP Optical Showroom, Bahraich.</span>
+          <span>Developed for EYELAMP Optical Showroom, Bahraich.</span>
         </div>
       </div>
     </footer>

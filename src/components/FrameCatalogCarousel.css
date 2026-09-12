@@ -1,0 +1,92 @@
+/* Styles for FrameCatalogCarousel — relies on the CSS custom properties
+   already defined at :root in src/index.css (--ink, --brass, --paper,
+   --line, --slate, --radius-lg, --shadow-card, --font-mono, --font-display).
+   If any of these aren't defined in your project, add them to :root first. */
+
+.frame-catalog-card {
+  background: var(--white, #fff);
+  border: 1px solid var(--line, #e2ddd1);
+  border-radius: var(--radius-lg, 28px);
+  padding: clamp(1.4rem, 3vw, 2.4rem) clamp(1rem, 4vw, 2.6rem) 1.2rem;
+  box-shadow: var(--shadow-card, 0 12px 30px -18px rgba(0, 0, 0, 0.25));
+  position: relative;
+}
+
+.frame-catalog-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem 0.5rem 1.6rem;
+}
+
+.frame-catalog-image {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  margin-bottom: 1.6rem;
+}
+
+.frame-catalog-info h3 {
+  font-family: var(--font-display, serif);
+  font-size: 1.6rem;
+  letter-spacing: 0.02em;
+  color: var(--ink, #15181c);
+}
+
+.frame-catalog-counter {
+  text-align: center;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  color: var(--slate, #5b6570);
+  letter-spacing: 0.08em;
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--line, #e2ddd1);
+  margin-top: 0.4rem;
+}
+
+.frame-carousel-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--paper, #f6f4ef);
+  border: 1px solid var(--line, #e2ddd1);
+  color: var(--ink, #15181c);
+  font-size: 0.85rem;
+  transition: all 0.25s ease;
+}
+
+.frame-catalog-card .carousel-control-prev,
+.frame-catalog-card .carousel-control-next {
+  width: 56px;
+  opacity: 1;
+  top: auto;
+  bottom: 90px;
+  height: 40px;
+}
+
+.frame-catalog-card .carousel-control-prev {
+  justify-content: flex-start;
+}
+
+.frame-catalog-card .carousel-control-next {
+  justify-content: flex-end;
+}
+
+.frame-catalog-card .carousel-control-prev:hover .frame-carousel-arrow,
+.frame-catalog-card .carousel-control-next:hover .frame-carousel-arrow {
+  background: var(--brass, #b98a4e);
+  border-color: var(--brass, #b98a4e);
+  color: var(--ink, #15181c);
+}
+
+@media (max-width: 767.98px) {
+  .frame-catalog-card .carousel-control-prev,
+  .frame-catalog-card .carousel-control-next {
+    bottom: auto;
+    top: 40%;
+  }
+}
