@@ -97,15 +97,25 @@ const ICONS = {
 };
 
 // 8 Different Eyeglass Frame Images - Various Angles & Styles
+// const PRODUCT_IMAGES = {
+//   //1: "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=600&h=400&fit=crop", // Classic black frames - front view
+//   2: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=600&h=400&fit=crop", // Tortoiseshell frames - angled
+//   3: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&h=400&fit=crop", // Gold wire frames - side view
+//   //4: "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=600&h=400&fit=crop&sat=-100", // Modern square frames - front view
+//   5: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=600&h=400&fit=crop&sat=-100", // Vintage brown frames - angled
+//   6: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&h=400&fit=crop&sat=-100", // Silver wire frames - side view
+//   //7: "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=600&h=400&fit=crop&sat=-100", // Rimless frames - front view
+//   8: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=600&h=400&fit=crop&sat=-100", // Cat-eye frames - angled
+// };
 const PRODUCT_IMAGES = {
-  1: "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=600&h=400&fit=crop", // Classic black frames - front view
-  2: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=600&h=400&fit=crop", // Tortoiseshell frames - angled
-  3: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&h=400&fit=crop", // Gold wire frames - side view
-  4: "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=600&h=400&fit=crop&sat=-100", // Modern square frames - front view
-  5: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=600&h=400&fit=crop&sat=-100", // Vintage brown frames - angled
-  6: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&h=400&fit=crop&sat=-100", // Silver wire frames - side view
-  7: "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=600&h=400&fit=crop&sat=-100", // Rimless frames - front view
-  8: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=600&h=400&fit=crop&sat=-100", // Cat-eye frames - angled
+  1: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&h=600&fit=crop", // Power Lenses / Classic frames
+  2: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=600&h=600&fit=crop", // Tortoiseshell frames
+  3: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&h=600&fit=crop", // Gold wire frames
+  4: "https://images.unsplash.com/photo-1508296695146-257a814070b4?w=600&h=600&fit=crop", // Sunglasses / Modern frames
+  5: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=600&h=600&fit=crop&sat=-100", // Vintage brown
+  6: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&h=600&fit=crop&sat=-100", // Silver wire
+  7: "https://images.unsplash.com/photo-1516715094483-75da7dee9758?w=600&h=600&fit=crop", // Rimless / Stylish clear frames
+  8: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=600&h=600&fit=crop&sat=-100", // Cat-eye frames
 };
 
 function ServicesGrid({ intro = true }) {
